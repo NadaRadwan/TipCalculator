@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/AlertDialog.AppCompat.Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:fontFamily="@string/app_name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/abc_action_bar_progress_bar_size"
+            android:id="@+id/textView5"
+            android:layout_gravity="center_horizontal" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Default Tip (%)"
+            android:id="@+id/tip" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textStyle="italic"
+            android:typeface="monospace"
+            android:ems="10"
+            android:id="@+id/defaultTip" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Default Currency"
+            android:id="@+id/currency" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20px" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/defaultCurrencyList"
+        android:choiceMode="singleChoice"
+        android:clickable="true"
+        android:listSelector="@color/colorPrimaryDark"
+        android:entries="@array/currencyList" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/save"
+        android:textColor="@color/colorPrimaryDark"
+        android:width="@dimen/abc_action_bar_overflow_padding_end_material"
+        android:layout_gravity="center_horizontal"
+        android:onClick="saveSettings"/>
+</LinearLayout>

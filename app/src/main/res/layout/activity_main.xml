@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.nada.tipcalculator.MainActivity"
+    style="@style/Li"
+        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to TipCalculator!"
+            style="@style/AlertDialog.AppCompat.Light"
+            android:fontFamily="@string/app_name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/abc_action_bar_progress_bar_size" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Please fill in the following fields:"
+        android:id="@+id/textView"
+        android:textSize="@dimen/abc_dialog_padding_material" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="60px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Bill Amount"
+        android:id="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/billAmount"
+        android:autoText="false"
+        android:editable="true"
+        android:textStyle="italic"
+        android:typeface="monospace"
+        android:visibility="visible" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tip (%)"
+        android:id="@+id/textView3" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textStyle="italic"
+            android:typeface="monospace"
+            android:ems="10"
+            android:id="@+id/tip" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suggest a Tip"
+            android:id="@+id/suggestTip"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center_horizontal"
+            android:onClick="suggestTip"/>/>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Number of People Paying"
+        android:id="@+id/textView4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:textStyle="italic"
+        android:typeface="monospace"
+        android:id="@+id/numPpl"
+        android:text="1" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20px" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Calculate Tip"
+        android:id="@+id/calculateTip"
+        android:textColor="@color/colorPrimaryDark"
+        android:width="@dimen/abc_action_bar_overflow_padding_end_material"
+        android:layout_gravity="center_horizontal"
+        android:onClick="calcTip"/>
+
+</LinearLayout>
+
+
